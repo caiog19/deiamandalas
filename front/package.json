@@ -2,16 +2,19 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+  {
+    "scripts": {
+      "build": "vue-cli-service build",
+      "deploy": "gh-pages -d dist"
+    },
+    "homepage": "https://github.com/caiog19/deiamandalas"
   },
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^2.0.0",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.1.1",
     "postcss-loader": "^8.1.1",
     "sass": "^1.77.8",
     "sass-loader": "^16.0.0",
