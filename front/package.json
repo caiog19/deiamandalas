@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "gh-pages -d dist"
-  },
+    "lint": "vue-cli-service lint"
+},
   "homepage": "https://github.com/caiog19/deiamandalas",
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^2.0.0",
