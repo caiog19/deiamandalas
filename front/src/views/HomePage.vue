@@ -85,7 +85,7 @@ export default {
     },
     created() {
         console.log('Fetching products...');
-        axios.get('https://seu-backend-railway.app/api/products')
+        axios.get('http://localhost:3000/api/products')
             .then(response => {
                 console.log('Products fetched successfully:', response.data);
                 this.products = response.data;
