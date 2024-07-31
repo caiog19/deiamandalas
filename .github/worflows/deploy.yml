@@ -40,6 +40,6 @@ jobs:
     - name: Deploy back-end to Railway
       env:
         RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
-        RAILWAY_PROJECT: "nome-do-seu-projeto-railway"
       run: |
+        cd backend
         railway up
