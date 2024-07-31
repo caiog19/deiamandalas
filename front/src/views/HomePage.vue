@@ -41,7 +41,7 @@
                     :autoplay="true" 
                     :navigation-enabled="true"
                     :pauseAutoplayOnHover="true"
-                    :transition= "4000"
+                    :transition="4000"
                 >
                     <Slide v-for="product in products" :key="product.id">
                         <div class="product">
@@ -85,7 +85,7 @@ export default {
     },
     created() {
         console.log('Fetching products...');
-        axios.get('http://localhost:3000/api/products')
+        axios.get('https://seu-backend-railway.app/api/products')
             .then(response => {
                 console.log('Products fetched successfully:', response.data);
                 this.products = response.data;
@@ -95,13 +95,13 @@ export default {
             });
     },
     methods: {
-    scrollToMain() {
-      const element = document.getElementById('main')
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
+        scrollToMain() {
+            const element = document.getElementById('main')
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+        }
     }
-  }
 };
 </script>
 
