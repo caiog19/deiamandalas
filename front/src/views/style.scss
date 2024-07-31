@@ -1,0 +1,156 @@
+// src/styles/global.scss
+
+$primary-color: #111111;
+$secondary-color: #fafafa;
+$button-color: #1c5faa;
+
+// HomePage styles
+// HEADER
+.tudo {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(229, 238, 238, 0.829);
+}
+
+.hero {
+    position: relative;
+    background-image: url('@/assets/hero.png'); // Caminho relativo para a imagem nos assets
+    background-size: cover;
+    background-position: center;
+    color: $secondary-color;
+    padding: 2rem;
+    text-align: center;
+    height: 850px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent; // Fundo semitransparente
+    color: $primary-color;
+    font-size: 21px;
+}
+
+.store-name {
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: $primary-color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: $button-color;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.buy-button {
+    background-color: $button-color;
+    color: $secondary-color;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-button:hover {
+    background-color: lighten($button-color, 10%);
+    transform: scale(1.05);
+}
+
+///////////////////////////////////////////////////
+//MAIN
+.title-main { 
+    text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
+    margin-left: 20%; /* Move o contêiner do texto para a esquerda */
+    color: $primary-color;
+    font-size: 37px;
+}
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.products {
+    display: flex;
+    justify-content: center; /* Centraliza os produtos horizontalmente */
+    align-items: center; /* Centraliza os produtos verticalmente */
+    gap: 2rem; /* Espaço entre os produtos */
+    padding: 2rem;
+    flex-wrap: wrap; /* Permite que os produtos quebrem linha se necessário */
+}
+
+.product {
+    text-align: left;
+    max-width: 300px; /* Limita a largura dos produtos */
+    flex: 1 1 30%; /* Faz com que os produtos ocupem 30% do contêiner, ajustável conforme necessário */
+    box-sizing: border-box;
+    margin: 1rem; /* Espaço ao redor de cada produto */
+}
+
+.product img {
+    width: 100%; /* Ajusta a imagem para preencher o contêiner do produto */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 0.5rem 0;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: $primary-color;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #585858;
+}
+
+////////////////////////////////
