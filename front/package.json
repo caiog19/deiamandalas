@@ -2,13 +2,11 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
-  {
-    "scripts": {
-      "build": "vue-cli-service build",
-      "deploy": "gh-pages -d dist"
-    },
-    "homepage": "https://github.com/caiog19/deiamandalas"
+  "scripts": {
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://github.com/caiog19/deiamandalas",
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^2.0.0",
     "axios": "^1.7.2",

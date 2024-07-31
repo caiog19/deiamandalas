@@ -30,18 +30,16 @@ jobs:
         cd front
         yarn build
 
-    - name: Deploy to GitHub Pages
-      if: github.event_name == 'push'
+    - name: Deploy to Vercel
       run: |
         cd front
-        yarn deploy
+        npx vercel --prod
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
-    - name: Deploy back-end to Heroku
-      if: github.event_name == 'push'
+    - name: Deploy back-end to Railway
       env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        HEROKU_APP_NAME: "deiaMandalas"
+        RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
+        RAILWAY_PROJECT: "nome-do-seu-projeto-railway"
       run: |
-        git push https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git main
+        railway up
